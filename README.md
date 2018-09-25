@@ -35,7 +35,9 @@ Date: Tue, 25 Sep 2018 05:43:07 GMT
 gvenkat@PT7910:~$ 
 
 
+
 Note: While using curl, we need to make sure the address string is not seaparated by spaces. Otherwise curl thinks it's a separate host.
+
 
 
 gvenkat@PT7910:~$ curl -i http://localhost:5000/api/v1/location?addr=San Francisco
