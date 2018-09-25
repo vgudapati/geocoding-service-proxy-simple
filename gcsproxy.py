@@ -53,7 +53,7 @@ class HTTPClient():
                 return self.response
 
 
-class GDSProxy(object):
+class GCSProxy(object):
    """
    Backend proxy towards the Geo Decoding Servers.
 

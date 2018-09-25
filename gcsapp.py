@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request
-from gdsproxy import GDSProxy
+from gcsproxy import GCSProxy
 import json
 
-G = GDSProxy()
+G = GCSProxy()
 app = Flask(__name__)
 
 servers = ['active_server', 'backup_server']
