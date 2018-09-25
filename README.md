@@ -2,9 +2,44 @@
 
 A simple geo coding proxy service to resolve the latitude and longitude of a given address using third party geo coding services. Should a third party service fail to respond or a network error occur, the proxy should fallback to another one.
 
+
+## Requirements Satisfaction
+
+* Implemented in Python
+
+The code is implemented using python 3
+
+* Support Multiple Geocoding Services
+
+I used Here and google maps geo coding services. Initially tried out with cusum services like, locationiq.com as well. But then limited to google and HERE finally. A list of 3 servers were maintainted, the first one backup.com being invalid one, so that every time the test is done, there is a failure and the proxy is falling back to another one.
+
+* Implements Fallback To Backup Geocoding Services
+
+I had thought about a 3-4 altenatives of fall back mechanisms and was working on all of them. But finally just limited to a sequntial fall back for simplicity purposes. The other fall back mechanisms  i was trying worth mentioneing are random, everytime we give an address, the service tried a service at random. A third alternative was to have the geocoding servers at differene priorities based on the costs. But i have converted this scenario to a sequential one, which is why i preferred to implement the sequential option in the end.
+
+* RESTful HTTP Interface
+
+A HTTP Client class is defined to handle the requests.
+
+* JSON for Data Serialization
+
+Used Json to return the data via the interface.
+
+* Provides Documentation - How To Run The Service
+
+Provided below how to run.
+
+* Provides Documentation - How To Use The Services API
+
+The gcsproxy module needs to be imported and using the GCSProxy class the request_location method needsto be called.
+
+* Uses git and github for for revision control
+
+The code is uploaded to github under this repo.
+
 ## Running the Application
 
-* A Python cnvironment is created with requirements listed in requirements.txt 
+* A Python environment is created with requirements listed in requirements.txt 
 * Run gcsapp.py as 'python gcsapp.py'
 * Point the browser to http://localhost:5000/api/v1/location?addr= followed by addres string.
 * The browser displays the latitude and longitude for the address in json format.
