@@ -17,6 +17,7 @@ For example, if the address string is 'San Franciso', the browser displays,
 
 * The API can be tested using cli using curl.
 gvenkat@PT7910:~$ curl -i http://localhost:5000/api/v1/location?addr=San+Francisco
+
 HTTP/1.0 200 OK
 Content-Type: application/json
 Content-Length: 45
@@ -29,6 +30,7 @@ gvenkat@PT7910:~$
 Note: While using cure, we need to make sure the address string is not seaparated by spaces. Otherwise curl thinks it's a separate host.
 
 gvenkat@PT7910:~$ curl -i http://localhost:5000/api/v1/location?addr=San Francisco
+
 HTTP/1.0 200 OK
 Content-Type: application/json
 Content-Length: 43
