@@ -7,15 +7,15 @@ A simple geo coding proxy service to resolve the latitude and longitude of a giv
 
 * Implemented in Python
 
-The code is implemented using python 3
+  The code is implemented using python 3
 
 * Support Multiple Geocoding Services
 
-I used Here and google maps geo coding services. Initially tried out with cusum services like, locationiq.com as well. But then limited to google and HERE finally. A list of 3 servers were maintainted, the first one backup.com being invalid one, so that every time the test is done, there is a failure and the proxy is falling back to another one.
+  I used Here and google maps geo coding services. Initially tried out with cusum services like, locationiq.com as well. But   then limited to google and HERE finally. A list of 3 servers were maintainted, the first one backup.com being invalid one,  so that every time the test is done, there is a failure and the proxy is falling back to another one.
 
 * Implements Fallback To Backup Geocoding Services
 
-I had thought about a 3-4 altenatives of fall back mechanisms and was working on all of them. But finally just limited to a sequntial fall back for simplicity purposes. The other fall back mechanisms  i was trying worth mentioneing are random, everytime we give an address, the service tried a service at random. A third alternative was to have the geocoding servers at differene priorities based on the costs. But i have converted this scenario to a sequential one, which is why i preferred to implement the sequential option in the end.
+  I had thought about a 3-4 altenatives of fall back mechanisms and was working on all of them. But finally just limited to a sequntial fall back for simplicity purposes. The other fall back mechanisms  i was trying worth mentioneing are random, everytime we give an address, the service tried a service at random. A third alternative was to have the geocoding servers at differene priorities based on the costs. But i have converted this scenario to a sequential one, which is why i preferred to implement the sequential option in the end.
 
 * RESTful HTTP Interface
 
