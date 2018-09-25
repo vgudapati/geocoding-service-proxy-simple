@@ -55,6 +55,6 @@ Date: Tue, 25 Sep 2018 05:39:54 GMT
 
 curl: (6) Could not resolve host: Francisco
 
-gvenkat@PT7910:~/SDCND/CarND-MPC-Project/build$
+
 
 
